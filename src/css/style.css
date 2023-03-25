@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: rgb(237, 0, 0);
+    background: linear-gradient(90deg, rgba(237, 0, 0, 1) 0%, rgba(0, 14, 255, 1) 77%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* caixa principal cor branco */
+
+.container {
+    width: 80%;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+/* navegaçao */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    margin: 30px 30px;
+}
+
+.nav-link {
+    width: 100%;
+    text-align: right;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.a-navbar {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.a-navbar:hover {
+    color: rgba(0, 14, 255, 1);
+}
+
+/* conteudo main */
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* conteudo caixa left */
+
+.caixa1 {
+    margin-left: 20px;
+
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 40px;
+    color: #707070;
+    font-weight: 100;
+    margin: 25px 0;
+}
+
+.caixa0 {
+    background: rgb(255, 0, 154);
+    background: linear-gradient(90deg, rgba(255, 0, 154, 1) 0%, rgba(246, 4, 46, 1) 100%);
+    height: 400px;
+    width: 10px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+
+.caixa1 p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #707070;
+    margin: 30px 0;
+}
+
+h4 {
+    font-size: 30px;
+    color: #000;
+    margin: 30px 0;
+}
+
+.buy {
+    width: 150px;
+    border: none;
+    padding: 12px 10px;
+    outline: none;
+    color: white;
+    background: rgb(255, 0, 154);
+    background: linear-gradient(90deg, rgba(255, 0, 154, 1) 0%, rgba(246, 4, 46, 1) 100%);
+    ;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 19px;
+}
+
+/* conteudo caixa right */
+
+.caixa2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.img-caixa2 {
+    width: 90%;
+    z-index: 2;
+}
+
+.elemento {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 14, 255, 1);
+    height: 100%;
+    width: 80%;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    z-index: 1;
+    transform: translateX(200px);
+    box-shadow: 0 0 25px black;
+}
+
+button {
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.img-button {
+    width: 50px;
+    height: 50px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.social img {
+    height: 30px;
+    margin: 30px;
+    cursor: pointer;
+}
