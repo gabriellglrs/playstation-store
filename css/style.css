@@ -6,12 +6,7 @@
 }
 
 body {
-    background: rgb(237, 0, 0);
-    background: linear-gradient(
-        90deg,
-        rgba(237, 0, 0, 1) 0%,
-        rgba(0, 14, 255, 1) 77%
-    );
+    background-color: #000eff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,41 +27,40 @@ body {
 
 /* navegaçao */
 
-.navbar {
-    width: 100%;
+.container .header {
+    padding: 20px 20px;
+    padding-bottom: 0px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
 
-.logo {
+.container .header img {
     width: 80px;
-    margin: 30px 30px;
+    margin-right: 20px;
 }
 
-.nav-link {
-    width: 100%;
-    text-align: right;
-}
-
-li {
+.container .header .nav .ul {
+    display: flex;
     list-style: none;
-    display: inline-block;
-    margin-right: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.a-navbar {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+.container .header .nav .ul li {
+    padding: 10px;
+    border: 2px solid transparent;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-.a-navbar:hover {
-    color: rgba(0, 14, 255, 1);
+.container .header .nav .ul li:hover {
+    border-bottom: 2px solid #000eff;
+    background-color: #e2e2e2;
+    border-radius: 5px;
 }
-
-/* conteudo main */
 
 .main {
     display: flex;
@@ -75,10 +69,6 @@ li {
 }
 
 /* conteudo caixa left */
-
-.caixa1 {
-    margin-left: 20px;
-}
 
 h2 {
     font-size: 54px;
@@ -92,18 +82,19 @@ h3 {
 }
 
 .caixa0 {
-    background: rgb(255, 0, 154);
-    background: linear-gradient(
-        90deg,
-        rgba(255, 0, 154, 1) 0%,
-        rgba(246, 4, 46, 1) 100%
-    );
+    position: absolute;
+    background-color: rgba(246, 4, 46, 1);
     height: 400px;
     width: 10px;
     margin-left: 20px;
     border-radius: 50px;
 }
-
+.caixa1 {
+    margin-left: 20px;
+    position: relative;
+    left: 25px;
+    top: 30px;
+}
 .caixa1 p {
     font-size: 20px;
     font-weight: 400;
@@ -123,12 +114,7 @@ h4 {
     padding: 12px 10px;
     outline: none;
     color: white;
-    background: rgb(255, 0, 154);
-    background: linear-gradient(
-        90deg,
-        rgba(255, 0, 154, 1) 0%,
-        rgba(246, 4, 46, 1) 100%
-    );
+    background-color: rgba(246, 4, 46, 1);
     border-radius: 10px;
     cursor: pointer;
     z-index: 2;
@@ -141,6 +127,7 @@ h4 {
     display: flex;
     align-items: center;
     position: relative;
+    margin-top: 0;
 }
 
 .img-caixa2 {
@@ -149,16 +136,16 @@ h4 {
 }
 
 .elemento {
+    display: block;
     position: absolute;
     right: 0;
     top: 0;
     background-color: rgba(0, 14, 255, 1);
     height: 100%;
-    width: 80%;
-    border-top-left-radius: 60px;
-    border-bottom-left-radius: 60px;
+    width: 60%;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
     z-index: 1;
-    transform: translateX(200px);
     box-shadow: 0 0 25px black;
 }
 
@@ -186,4 +173,95 @@ button {
     height: 30px;
     margin: 30px;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-color: white;
+    }
+
+    .container .header {
+        margin-bottom: 0px;
+    }
+    .container {
+        width: 95%;
+    }
+    .main {
+        flex-direction: column-reverse;
+        margin-top: 100px;
+        text-align: left;
+    }
+
+    .caixa1 {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .img-caixa2 {
+        width: 70%;
+    }
+
+    .caixa0 {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .container .header img {
+        width: 95px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .ul li {
+        background-color: #d6d6d6;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .elemento {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        box-shadow: 0 0 10px black;
+    }
+}
+
+@media (max-width: 700px) {
+    .caixa1 h3 {
+        font-size: 30px;
+    }
+    .caixa1 h2 {
+        font-size: 40px;
+    }
+    .caixa1 {
+        margin-top: 20px;
+    }
+    .elemento {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 410px) {
+    .caixa1 h3 {
+        font-size: 25px;
+    }
+
+    .caixa1 h2 {
+        max-width: 200px;
+        display: inline-block;
+    }
+
+    .elemento {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: 0 0 5px black;
+    }
 }
