@@ -133,6 +133,7 @@ h4 {
 .img-caixa2 {
     width: 90%;
     z-index: 2;
+    animation: img 2s infinite alternate ease-in-out;
 }
 
 .elemento {
@@ -173,6 +174,12 @@ button {
     height: 30px;
     margin: 30px;
     cursor: pointer;
+}
+
+@keyframes img {
+    from {
+        transform: translate(-5%, -10%) rotate(-5deg);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -243,6 +250,12 @@ button {
     .elemento {
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
+    }
+
+    @keyframes img {
+        from {
+            transform: translate(-10%, -10%) rotate(-5deg);
+        }
     }
 }
 
