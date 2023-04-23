@@ -2,24 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
     background: rgb(237, 0, 0);
-    background: linear-gradient(90deg, rgba(237, 0, 0, 1) 0%, rgba(0, 14, 255, 1) 77%);
+    background: linear-gradient(
+        90deg,
+        rgba(237, 0, 0, 1) 0%,
+        rgba(0, 14, 255, 1) 77%
+    );
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /* caixa principal cor branco */
 
 .container {
     width: 80%;
-    border-radius: 40px;
     background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     margin-top: 40px;
@@ -69,14 +72,12 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 /* conteudo caixa left */
 
 .caixa1 {
     margin-left: 20px;
-
 }
 
 h2 {
@@ -92,7 +93,11 @@ h3 {
 
 .caixa0 {
     background: rgb(255, 0, 154);
-    background: linear-gradient(90deg, rgba(255, 0, 154, 1) 0%, rgba(246, 4, 46, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 154, 1) 0%,
+        rgba(246, 4, 46, 1) 100%
+    );
     height: 400px;
     width: 10px;
     margin-left: 20px;
@@ -119,8 +124,11 @@ h4 {
     outline: none;
     color: white;
     background: rgb(255, 0, 154);
-    background: linear-gradient(90deg, rgba(255, 0, 154, 1) 0%, rgba(246, 4, 46, 1) 100%);
-    ;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 154, 1) 0%,
+        rgba(246, 4, 46, 1) 100%
+    );
     border-radius: 10px;
     cursor: pointer;
     z-index: 2;
